@@ -7,13 +7,13 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5433/roboservice_db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/roboservice_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
   db:
     image: postgres:15
     ports:
-      - "5433:5433"
+      - "5432:5432"
     environment:
       POSTGRES_DB: roboservice_db
       POSTGRES_USER: postgres
